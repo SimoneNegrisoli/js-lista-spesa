@@ -10,11 +10,27 @@
 // 	- Ricordiamoci di incrementare il contatore, o comunque di inserire una condizione di uscita, all'interno ciclo while
 
 
-const toBuy = [];
-const whatBuy = prompt ('Quali sono i prodotti da acquistare? ');
- 
-let listProduct = whatBuy; 
-console.log(listProduct)
+let toBuy = [];
+let whatBuy = '';
 
-let stop = false;
-let i = 0;
+
+while (whatBuy !== 'stop' && whatBuy !== ''){
+
+   whatBuy = prompt ('Quali sono i prodotti da acquistare? (scrivi stop per termiare)')
+
+   if (whatBuy !== 'stop'){
+    toBuy.push(whatBuy);
+   }
+}
+console.log(whatBuy);
+
+const toBuyEl = document.getElementById("lista");
+
+for (i = 0 ; i < toBuy.length; i++){
+
+    const whatBuyEl = document.createElement("li");
+    whatBuyEl.innerHTML = toBuy[i];
+    toBuyEl.appendChild(whatBuyEl);
+
+    console.log(toBuy[i])
+}
