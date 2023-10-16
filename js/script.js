@@ -14,9 +14,9 @@ let toBuy = [];
 let whatBuy = '';
 
 
-while (whatBuy !== 'stop' && whatBuy !== ''){
+while (whatBuy !== 'stop' && whatBuy !== ' ' ){
 
-   whatBuy = prompt ('Quali sono i prodotti da acquistare? (scrivi stop per termiare)')
+   whatBuy = prompt('Quali sono i prodotti da acquistare? (scrivi stop per termiare)')
 
    if (whatBuy !== 'stop'){
     toBuy.push(whatBuy);
